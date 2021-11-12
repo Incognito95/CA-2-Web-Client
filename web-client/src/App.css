@@ -1,9 +1,16 @@
-html,
-body {
-    height: 100%;
+/* ------ welcome page ---- */
+h3, .list {
+    margin-left: 20px;
 }
 
+.instructions {
+    background: #F8F9FA;
+    height: 250px;
+    width: 35%;
+    margin-left: 20px;
+}
 
+/* ------ login form ---- */
 .form-signin {
     width: 100%;
     max-width: 330px;
