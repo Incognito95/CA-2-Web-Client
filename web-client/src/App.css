@@ -1,14 +1,16 @@
 /* ------ welcome page ---- */
-h3, .list {
+h3, .list, .instructions-box {
     margin-left: 20px;
 }
 
-.instructions {
-    background: #F8F9FA;
-    height: 250px;
-    width: 35%;
+.instructions-list {
+    line-height: 2.4em;
+}
+
+.btn-logout {
     margin-left: 20px;
 }
+
 
 /* ------ login form ---- */
 .form-signin {
@@ -18,22 +20,13 @@ h3, .list {
     margin: 150px auto auto;
 }
 
-.form-signin .checkbox {
-    font-weight: 400;
+
+/* ------ chuck norris ---- */
+.chuck-btn, .result-box {
+    margin-left: 20px;
 }
 
-.form-signin .form-floating:focus-within {
-    z-index: 2;
-}
-
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+.result-box {
+    height: 380px;
+    background-color: #F8F9FA !important;
 }

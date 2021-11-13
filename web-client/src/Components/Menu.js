@@ -1,6 +1,9 @@
 import {NavLink} from 'react-router-dom';
+import React from "react";
 
 function Menu() {
+    const logout = () => { /*TODO*/ }
+
     return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
@@ -15,9 +18,19 @@ function Menu() {
                     <li className="nav-item">
                         <NavLink exact active className="active nav-link" to="/">Welcome</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink exact active className="active nav-link" to="chuck">Chuck Norris Jokes</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink exact active className="active nav-link" to="dad">Dad Jokes</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink exact active className="active nav-link" to="jokeapi">Joke API</NavLink>
+                    </li>
                 </ul>
                 <form className="d-flex">
-                        <NavLink active className="btn btn-success" to="/login">Login</NavLink>
+                    <NavLink exact active className="active nav-link text-black" to="#" id="user">You are now logged in as:</NavLink>
+                    <button onClick={logout} className="btn btn-success btn-logout">Logout</button>
                 </form>
             </div>
         </div>
