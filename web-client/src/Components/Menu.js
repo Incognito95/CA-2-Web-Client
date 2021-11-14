@@ -1,11 +1,37 @@
 import {NavLink} from 'react-router-dom';
+import React, {useState} from "react";
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 
 
-function Menu() {
+class Menu extends React.Component {
 
-    const logout = () => { /* TODO */ }
+    constructor(props) {
+        super(props);
 
-    const user = "qwe";
+        this.state = {
+            opened: false
+        };
+    }
+
+
+    render() {
+
+        const logout = () => { /* TODO */ }
+
+        const admin = "admin";
+        const user = "user";
+
+        const loginUser = () => {
+            if (admin == "admin") {
+                return (
+                    <div>{admin}</div>
+                )
+            } else if (user == "user") {
+                return (
+                    {user}
+                )
+            }
+        }
 
     return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,14 +59,24 @@ function Menu() {
                 </ul>
                 <form className="d-flex">
                     <NavLink exact active className="active nav-link text-black" to="#" id="user">
-                        You are now logged in as: {user}
+                        {(() => {
+                            const admin = "Admin";
+                            const user = "User";
+
+                            if (admin == admin) {
+                                return "You are now logged in as: " + admin;
+                            } else if (admin != admin) {
+                                return "You are now logged in as: " + user;
+                            }
+                        })()}
                     </NavLink>
                     <button onClick={logout} className="btn btn-success btn-logout">Logout</button>
                 </form>
             </div>
         </div>
     </nav>
-    )
+        )
+    }
 }
 
 export default Menu;
