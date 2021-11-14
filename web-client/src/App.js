@@ -33,6 +33,10 @@ function App() {
             .then(res =>setLoggedIn(true));
     }
 
+    if (login === true) {
+        return "admin has logged in"
+    }
+
     return (
         <div>
             {!loggedIn ? (<Login login={login} />) :

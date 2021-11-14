@@ -1,8 +1,11 @@
 import {NavLink} from 'react-router-dom';
-import React from "react";
+
 
 function Menu() {
-    const logout = () => { /*TODO*/ }
+
+    const logout = () => { /* TODO */ }
+
+    const user = "qwe";
 
     return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,7 +32,9 @@ function Menu() {
                     </li>
                 </ul>
                 <form className="d-flex">
-                    <NavLink exact active className="active nav-link text-black" to="#" id="user">You are now logged in as:</NavLink>
+                    <NavLink exact active className="active nav-link text-black" to="#" id="user">
+                        You are now logged in as: {user}
+                    </NavLink>
                     <button onClick={logout} className="btn btn-success btn-logout">Logout</button>
                 </form>
             </div>

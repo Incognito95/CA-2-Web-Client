@@ -15,7 +15,7 @@ function Login({ login }) {
     return (
         <div className="form-signin">
             <h1 className="h3 mb-3 fw-normal text-center">Please login</h1>
-            <form onChange={onChange}>
+            <form onChange={onChange} id="form">
                 <input placeholder="Username" id="username" className="form-control mt-3" />
                 <input type="password" placeholder="Password" id="password" className="form-control mt-3" />
                 <button onClick={performLogin} className="w-100 btn btn-lg btn-primary mt-3">Login</button>
