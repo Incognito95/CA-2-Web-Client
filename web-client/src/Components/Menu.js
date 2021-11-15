@@ -1,7 +1,6 @@
 import {NavLink} from 'react-router-dom';
 import React, {useState} from "react";
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-
+import facade from "../ApiFacade";
 
 class Menu extends React.Component {
 
@@ -13,25 +12,10 @@ class Menu extends React.Component {
         };
     }
 
-
     render() {
 
-        const logout = () => { /* TODO */ }
 
-        const admin = "admin";
-        const user = "user";
-
-        const loginUser = () => {
-            if (admin == "admin") {
-                return (
-                    <div>{admin}</div>
-                )
-            } else if (user == "user") {
-                return (
-                    {user}
-                )
-            }
-        }
+    const logout = () => { facade.logout() }
 
     return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -78,5 +62,6 @@ class Menu extends React.Component {
         )
     }
 }
+
 
 export default Menu;

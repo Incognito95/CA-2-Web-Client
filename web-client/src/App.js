@@ -27,7 +27,16 @@ import facade from "./ApiFacade";
 function App() {
     const [loggedIn, setLoggedIn] = useState(false)
 
-    const logout = () => { /*TODO*/ }
+    const logout = () => {
+        // confused on how we get this to work as it's not being called
+        facade.logout()
+        setLoggedIn(false)
+    }
+
+    if (logout == true) {
+        return "admin has logged out"
+    }
+
     const login = (user, pass) => {
         facade.login(user,pass)
             .then(res =>setLoggedIn(true));
@@ -72,7 +81,9 @@ function App() {
 function LoggedIn() {
     const [dataFromServer, setDataFromServer] = useState("Loading...")
 
-    useEffect(() => { /*TODO*/}, [])
+    useEffect(() => {
+        facade.fetchData().then(data=> setDataFromServer(data.msg));
+    }, [])
 
     return (
         <div>

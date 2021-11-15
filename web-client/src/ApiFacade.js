@@ -19,6 +19,7 @@ function ApiFacade() {
         const loggedIn = getToken() != null;
         return loggedIn;
     }
+
     const logout = () => {
         localStorage.removeItem("jwtToken");
     }
@@ -29,7 +30,12 @@ function ApiFacade() {
             .then(handleHttpErrors)
             .then(res => {setToken(res.token) })
     }
-    const fetchData = () => {/*TODO */  }
+
+    const fetchData = () => {
+        const options = makeOptions("GET",true); //True add's the token
+        return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
+    }
+
     const makeOptions= (method,addToken,body) =>{
         var opts = {
             method: method,

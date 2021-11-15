@@ -8,6 +8,7 @@ function Login({ login }) {
         evt.preventDefault();
         login(loginCredentials.username, loginCredentials.password);
     }
+
     const onChange = (evt) => {
         setLoginCredentials({ ...loginCredentials,[evt.target.id]: evt.target.value })
     }
