@@ -22,7 +22,7 @@ function Login({ login }) {
             <form onChange={onChange}>
                 <div className="Form-fields">
                     <input type="text" id="username" className="ControlInput ControlInput--email" placeholder="Username" required />
-                        <label for="username" className="Control-label Control-label--email">Username</label>
+                        <label for="username" className="Control-label Control-label--email"></label>
                         <div className="Control-requirements Control-requirements--email">
                             The username you input is incorrect!
                         </div>
@@ -30,10 +30,9 @@ function Login({ login }) {
 
                         <input type="checkbox" id="show-password" className="show-password"/>
 
-                            <label htmlFor="show-password" className="Control-label Control-label--showPassword">
-                            </label>
+                            <label htmlFor="show-password" className="Control-label Control-label--showPassword"></label>
 
-                            <input type="text" id="password" name="password" placeholder="password" autoComplete="off" autoCapitalize="off" autoCorrect="off"
+                            <input type="password" id="password" name="password" placeholder="password" autoComplete="off" autoCapitalize="off" autoCorrect="off"
                                 required pattern="{4-5}" className="ControlInput ControlInput--password" />
 
                                 <label htmlFor="password" className="Control-label Control-label--password">Password</label>
